@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$(window).scroll(function(){
-	    if ($(window).scrollTop() >= 54) {
+	    if ($(window).scrollTop() >= 1) {
 	        $('.header-pc, main').addClass('fixed-header');
 	    }
 	    else {
@@ -25,6 +25,14 @@ $(document).ready(function(){
 			scrollTop: $( href ).offset().top - 60
 		  }, '1000' );
 	  }
+	  e.preventDefault();
+	});
+
+	$( '.item-formality .btn-main' ).on( 'click', function(e){
+	  var href = $(this).attr( 'href' );
+	  $( 'html, body' ).animate({
+		scrollTop: $( href ).offset().top
+	  }, '1000' );
 	  e.preventDefault();
 	});
 

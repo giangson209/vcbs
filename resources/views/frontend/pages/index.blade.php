@@ -18,7 +18,7 @@
             <img src="{{ __BASE_URL__ }}/images/banner-mb.png" class="img-fluid w-100 bn-mb d-none" alt="">
         </div>
         <div class="link-banner text-uppercase">
-            <a href="{{ $site_info->link_banner }}" class="btn-main wow fadeInUp wHighlight" data-wow-duration="1s">{{ $site_info->title_banner }}</a>
+            <a href="{{ $site_info->link_banner }}" class="btn-main blink wow fadeInUp wHighlight" data-wow-duration="1s" target="_blank">{{ $site_info->title_banner }}</a>
         </div>
     </section>
     <section class="box-endow" id="endow">
@@ -59,7 +59,7 @@
                         <div class="item-endow endow-txt">
                             <h3>{{ $site_info->dk_obj }}</h3>
                             <div class="btn-endow">
-                                <a href="{{ $site_info->link_obj }}" class="btn-main">Xem tại đây</a>
+                                <a href="{{ $site_info->link_obj }}" class="btn-main" target="_blank">Xem tại đây</a>
                             </div>
                         </div>
                     </div>
@@ -102,9 +102,9 @@
     <section class="box-instruct" id="instruct">
         <div class="avr-abs"><img src="{{ __BASE_URL__ }}/images/bg-bot.png" class="img-fluid w-100" alt=""></div>
         <div class="container">
-            <div class="content-instruct text-center">
+            <div class="content-instruct text-center" id="instruct-1">
                 <div class="title wow fadeInUp wHighlight" data-wow-duration="1s">
-                    {!! @$site_info->title_hd_2 !!}
+                    {!! @$site_info->title_hd_1 !!}
                 </div>
                 <div class="list-step">
                     <div class="row">
@@ -124,7 +124,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-instruct text-center">
+            <div class="content-instruct text-center" id="instruct-2">
                 <div class="title wow fadeInUp wHighlight" data-wow-duration="1s">
                     {!! @$site_info->title_hd_2 !!}
                 </div>

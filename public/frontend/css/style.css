@@ -63,9 +63,9 @@ body {
     font-size: 14px;
   }
 }
-body.show_menu {
+/*body.show_menu {
   overflow: hidden;
-}
+}*/
 
 .container {
   max-width: 1104px;
@@ -189,11 +189,21 @@ time, mark, audio, video {
 }
 
 /*======================================== end config =================================*/
+main {
+  padding-top: 54px;
+}
+
+
 .header-top {
   font-weight: 500;
   color: #fff;
   padding: 14px 0;
   background: linear-gradient(101deg, #6DB93F 0.29%, #1D502D 108.83%);
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 1023px) {
   .header-top {
@@ -258,8 +268,14 @@ time, mark, audio, video {
   position: relative;
   width: 100%;
   z-index: 10;
-  top: 0;
+  top: 52px;
   left: 0;
+}
+@media (max-width: 1200px) {
+  .header-pc {
+    top: 50px;
+  }
+  
 }
 .header-pc.fixed-header {
   position: fixed;
@@ -268,6 +284,7 @@ time, mark, audio, video {
   .header-pc {
     padding: 14px 0;
     position: fixed;
+    top: 0;
   }
 }
 @media (max-width: 767px) {
@@ -355,7 +372,7 @@ time, mark, audio, video {
 .nav-mobile {
   display: none;
   position: fixed;
-  top: 74px;
+  top: 68px;
   left: -100%;
   width: 100%;
   height: calc(100% - 74px);
@@ -615,7 +632,7 @@ footer ul {
 
 @media (max-width: 1023px) {
   main {
-    padding-top: 74px;
+    padding-top: 68px;
   }
 }
 @media (max-width: 767px) {
@@ -624,7 +641,7 @@ footer ul {
   }
 }
 main.fixed-header {
-  padding-top: 94px;
+  padding-top: 142px;
 }
 @media (max-width: 1023px) {
   main.fixed-header {
@@ -1078,3 +1095,21 @@ a.btn-main:hover {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+@-webkit-keyframes blinker {
+  from {
+    transform: scale(1)
+  }
+  to {
+    transform: scale(1.06)
+  }
+}
+.blink{
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+/*  -webkit-animation-duration: 0.1s; */
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-direction: alternate;
+}
